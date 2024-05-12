@@ -28,10 +28,17 @@ readme = "README.md"
 [tool.poetry.dependencies]
 python = "^3.12"
 
-
 [tool.poetry.group.dev.dependencies]
 pylint = "*"
 pre-commit = "*"
+
+[tool.poetry.group.ml]
+optional = true
+
+[tool.poetry.group.ml.dependencies]
+pandas = { version = "*", extras = ["performance", "plot"] }
+numpy = "*"
+
 
 [build-system]
 requires = ["poetry-core"]
